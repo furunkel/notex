@@ -22,4 +22,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
 
   spec.add_dependency "prawn"
+  spec.add_dependency "bibtex-ruby"
+  spec.add_dependency "citeproc-ruby"
+  spec.add_dependency "text-hyphen"
+
 end
