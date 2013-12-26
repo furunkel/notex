@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+begin
+  require 'notex'
+rescue LoadError
+  $:.unshift File.join(File.dirname(__FILE__), *%w[.. lib])
+  require 'notex'
+end
+
+Notex::Document.generate(ARGV[1]) do
+  eval Notex::Parser.parse(File.read(ARGV[0]))
+end
